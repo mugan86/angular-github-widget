@@ -1,7 +1,10 @@
 language: node_js
 node_js:
-  - "stable"
-dist: trusty
+  - "14"
+cache:
+  directories:
+    - ./node_modules
+dist: xenial
 sudo: required
 branches:
   only:
@@ -10,4 +13,4 @@ before_script:
   - npm install -g @angular/cli
 script:
   - npm run lib.build
-  - npm run travis.lib
+  - ng test --watch false --browsers ChromeHeadless
