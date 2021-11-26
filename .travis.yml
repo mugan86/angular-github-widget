@@ -16,10 +16,11 @@ script:
   - ng test --watch false --browsers ChromeHeadless
   - ng build --configuration production
 
+# Despliegue continuo
 deploy:
   provider: pages
   skip_cleanup: true # To avoid cleanup of the artifact generated during script
-  github_token: $GITHUB_TOKEN # Provided as an environment variable in travis
-  local_dir: dist/libraries-project # Replace this with your project name
+  token: $GITHUB_TOKEN # Token proporcionado en las variables de entorno
+  local_dir: dist/libraries-project # Referencia de donde está compilado el proyecto
   on:
     branch: master
