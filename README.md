@@ -5,7 +5,7 @@
 
 ## Demo
 
-[https://mugan86.github.io/github-api-widget/](https://mugan86.github.io/github-api-widget/)
+[https://mugan86.github.io/angular-github-widget/](https://mugan86.github.io/angular-github-widget/)
 
 ## Screenshots
 
