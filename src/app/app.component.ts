@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SearchUserService, User } from 'github-user-widget';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'libraries-project';
+  user!: User;
+  title = 'githubApiDemo';
+  constructor(private userSearch: SearchUserService) { }
+  ngOnInit(): void {
+    this.userSearch.takeApiData('mugan86').then(
+      data => {
+        this.user = data;
+      }
+    );
+  }
 }
