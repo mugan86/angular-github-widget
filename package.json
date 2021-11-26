@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lib.build": "ng build githubUserWidget && cp -R ./projects/github-user-widget/src/lib/assets ./dist/github-user-widget/lib",
-    "test.lib": "npm test githubUserWidget"
+    "test.lib": "npm test githubUserWidget",
+    "travis.app": "ng test --watch=false --browsers=ChromeHeadless",
+    "travis.lib": "npm run test.lib --watch=false --browsers=ChromeHeadless"
   },
   "private": true,
   "dependencies": {
